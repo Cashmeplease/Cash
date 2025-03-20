@@ -63,7 +63,6 @@
         <h1>FIND THE CASH WINNIPEG</h1>
         <div id="randomNumbers">Tap the button</div>
         <button id="generateBtn" onclick="generateUniqueNumber()">Generate Number</button>
-        <button onclick="resetNumber()">Reset</button>
         <div id="dateTime"></div>
     </div>
     <script>
@@ -79,13 +78,6 @@
             document.getElementById("randomNumbers").textContent = `${newNumber}`;
             document.getElementById("randomNumbers").style.opacity = 1;
             document.getElementById("generateBtn").disabled = true;
-        }
-
-        function resetNumber() {
-            localStorage.removeItem("generatedNumber");
-            document.getElementById("randomNumbers").textContent = "Tap the button";
-            document.getElementById("randomNumbers").style.opacity = 1;
-            document.getElementById("generateBtn").disabled = false;
         }
 
         function updateDateTime() {
